@@ -3,7 +3,7 @@ os.system('cls')
 # Palabra a adivinar
 palabra = "python"
 # Estado actual de la palabra a mostrar al jugador
-result = "_ " * len(palabra)
+result = "_" * len(palabra)
 # Número de intentos restantes
 intentos_restantes = 3
 print ("Bienvenido al juego del Ahorcado")
@@ -21,7 +21,7 @@ while intentos_restantes > 0 and result != palabra:
       for i in range(len(palabra)):
         if palabra[i] == entrada:
           result = result[:i] + entrada + result[i + 1:]
-          #result = result.replace(result, entrada+(" _ "*(len(palabra))-1))
+          #result = result.replace(result, entrada+(" _ "*(len(palabra))))
     else:
       # La letra ingresada no está en la palabra
       intentos_restantes -= 1
