@@ -2,11 +2,11 @@ import os
 os.system('cls')
 palabra = "ahorcado"
 result = "_" * len(palabra)
-intentos_restantes = 3
+intentosRestantes = 3
 print ("Bienvenido al juego del Ahorcado")
-while intentos_restantes > 0 and result != palabra:
+while intentosRestantes > 0 and result != palabra:
   print(f"Palabra: {result}")
-  print(f"Intentos restantes: {intentos_restantes}")
+  print(f"Intentos restantes: {intentosRestantes}")
   entrada = input("Ingresa una letra o la palabra completa: ").lower()
   if len(entrada) == 1:
     if entrada in palabra:
@@ -14,12 +14,12 @@ while intentos_restantes > 0 and result != palabra:
         if palabra[i] == entrada:
           result = result[:i] + entrada + result[i + 1:]
     else:
-      intentos_restantes -= 1
+      intentosRestantes -= 1
   else:
     if entrada == palabra:
       result = palabra
     else:
-      intentos_restantes -= 1
+      intentosRestantes -= 1
 if result == palabra:
   print(f"¡Felicidades! Has adivinado la palabra: {palabra}")
 else:
